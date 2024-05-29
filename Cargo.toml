@@ -1,0 +1,63 @@
+[package]
+name = "llamapun"
+version = "0.3.4"
+edition = "2021"
+authors = ["Deyan Ginev <deyan.ginev@gmail.com>", "Jan Frederik Schaefer <j.schaefer@jacobs-university.de>"]
+
+[lib]
+name = "llamapun"
+crate-type = ["rlib", "dylib", "staticlib"]
+
+[dependencies.rustmorpha]
+git = "https://github.com/jfschaefer/rust-morpha.git"
+
+[dependencies.rust-senna]
+git = "https://github.com/jfschaefer/rust-senna.git"
+version = "*"
+
+[dependencies]
+libc = "0.2"
+regex = "1.1"
+walkdir = "2"
+gnuplot = "0.0.37"
+unidecode = "0.3"
+rust-crypto = "0.2"
+lazy_static = "1.3"
+libxml = "0.3.0"
+tar = "0.4"
+rayon = "1.2.0"
+jwalk = "0.4.0"
+whatlang = "0.16.1"
+circular-queue = "0.2"
+
+[dev-dependencies]
+serde = {version = "1.0", features = ["derive"]}
+csv = "1.1"
+serde_json = "1.0"
+
+[[example]]
+name="corpus_heading_stats"
+
+[[example]]
+name="corpus_mathml_stats"
+
+[[example]]
+name="corpus_node_model"
+
+[[example]]
+name="corpus_statement_paragraphs_model"
+
+[[example]]
+name="corpus_token_model"
+
+[[example]]
+name="pattern_example"
+
+[[example]]
+name="pos_tagging"
+
+[[example]]
+name="pre_ref_words"
+
+[[example]]
+name="word_tokenization"
